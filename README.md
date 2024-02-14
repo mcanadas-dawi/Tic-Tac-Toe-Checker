@@ -1,6 +1,6 @@
-# Tic-Tac-Toe-Checker
-## CodeWars kyu5 Kata
-### Tarea
+# TIC-TAC-TOE CHECKER
+## CODEWARS 5KYU KATA
+### TAREA
 Queremos comprobar el ganador del clásico juego Tic-Tac-Toe.
 Supongamos que el tablero tiene la forma de una matriz de 3x3, donde el valor es 0 si un lugar está vacío, 1 si es una "X" o 2 si es una "O", así:
 
@@ -9,14 +9,14 @@ Supongamos que el tablero tiene la forma de una matriz de 3x3, donde el valor es
  [0, 1, 2],
  
  [2, 1, 0]]
-### Reglas
+### REGLAS
 - **Return -1** si el tablero aún no está terminado Y nadie ha ganado todavía (hay espacios vacíos).
 - **Return 1** si ganó "X".
 - **Return 2** si "O" ganó.
 - **Return 0** si es empate.
 Puedes suponer que el tablero recibido es válido en el contexto de un juego de Tic-Tac-Toe.
 
-### Código
+### CÓDIGO
 ```java
 public static int isSolved(int[][] board) {
         for (int i=1; i<=2; i++) {
@@ -46,3 +46,5 @@ public static int isSolved(int[][] board) {
     }
 }
 ```
+### ENLACE AL KATA
+[Tik-tak-toe Link](https://www.codewars.com/kata/525caa5c1bf619d28c000335/java)
