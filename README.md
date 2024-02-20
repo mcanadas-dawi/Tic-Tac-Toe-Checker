@@ -19,22 +19,25 @@ Puedes suponer que el tablero recibido es válido en el contexto de un juego de 
 ### CÓDIGO
 ```java
 public static int isSolved(int[][] board) {
-        for (int i=1; i<=2; i++) {
+	//Comprobar ganador 
+	 for (int i=1; i<=2; i++) {
             for (int j=0; j<=board.length-1; j++) {
+		//Comprobar fila
                 if (board[j][0] == i && board[j][i] == i && board[j][2] == i) {
                     return i;
                 }
-
+		//Comprobar columna
                 if (board[0][j] == i && board[1][j] == i && board[2][j] == i) {
                     return i;
                 }
             }
-
+            //Comprobar diagonales
             if ((board[0][0]==i && board[1][1]==i && board[2][2]==i) || 
 			(board[0][2]==i && board[1][1]==i && board[2][0]==i)) {
                 return i;
             }
         }
+	//Comprobar si el tablero esta terminado
         for (int i=0; i<=board.length-1; i++) {
             for (int j=0; j<=board.length-1; j++) {
                 if (board[i][j] == 0) {
@@ -42,6 +45,7 @@ public static int isSolved(int[][] board) {
                 }
             }
         }
+	//Si ninguna de las anteriores se cumple, empate
         return 0;
     }
 }
